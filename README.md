@@ -1,24 +1,4 @@
-<img src="https://github.com/SamirPaulb/SamirPaulb/blob/main/assets/rainbow-superthin.webp" width="100%" loading="lazy">
-<h1 align="center" > 👩🏻‍💻 <br> Priscila Dalepiane </h1>
-
-<div>
-  <p>
-<b> Estatística </b> e <b>Engenharia de Software </b> aplicadas a Machine Learning, Deep Learning e MLOps. Experiência com manipulação e análise de dados, modelagem estatística, avaliação de modelos e construção de pipelines reprodutíveis.
-  </p>
-</div>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/priscila-gon%C3%A7alves-dalepiane-947b65b2/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://rpubs.com/prisciladalepiane" target="_blank">
-    <img src="https://img.shields.io/badge/RPubs-276DC3?style=flat&logo=r&logoColor=white" />
-  </a>
-  <a href="https://github.com/prisciladalepiane" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" />
-  </a>
-</p>
-<img src="https://github.com/SamirPaulb/SamirPaulb/blob/main/assets/rainbow-superthin.webp" width="100%" loading="lazy">
+# Projetos
 
 | Repositório | Descrição |
 |------|----------|
