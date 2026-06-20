@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priscila Dalepiane | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base / Reset Styles in the spirit of modern TemplateMo/Colorlib premium themes */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        /* Layout Grid */
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header / Navbar */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: 0.5px;
+        }
+        .logo span {
+            color: #3498db;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: #ffffff;
+            padding: 90px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #3498db, #2ecc71, #9b59b6);
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #bdc3c7;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            font-weight: 300;
+        }
+        .social-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .badge-linkedin { background-color: #0A66C2; }
+        .badge-github { background-color: #181717; }
+        .badge-rpubs { background-color: #276DC3; }
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Main Sections Layout */
+        .main-content {
+            padding: 60px 0;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        /* Profile Summary */
+        .profile-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 35px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 40px;
+        }
+        .profile-card p {
+            font-size: 16px;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Two Column Layout for Experience & Skills */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        @media(max-width: 900px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Timeline / Experience & Education */
+        .timeline-item {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 3px solid #eaedf2;
+            transition: border-color 0.3s;
+        }
+        .timeline-item:hover {
+            border-top-color: #3498db;
+        }
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .timeline-title h3 {
+            font-size: 18px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .timeline-title h4 {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+        .timeline-date {
+            font-size: 13px;
+            background-color: #e8f4fd;
+            color: #3498db;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .timeline-body ul {
+            list-style-type: none;
+        }
+        .timeline-body li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline-body li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Skills Cards */
+        .skills-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .skill-block {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .skill-block h4 {
+            font-size: 15px;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-tag {
+            font-size: 12px;
+            background-color: #f0f3f6;
+            color: #4a5568;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .skill-tag.highlight {
+            background-color: #e6fffa;
+            color: #00a3c4;
+            border: 1px solid #b2f5ea;
+        }
+
+        /* Repositories Grid */
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .repo-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        .repo-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: #3498db;
+        }
+        .repo-icon {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .repo-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .repo-desc {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        .repo-link {
+            font-size: 13px;
+            color: #3498db;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer-contact {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .footer-contact a {
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .footer-contact a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">PRISCILA<span>DALEPIANE</span></div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#repositorios">Projetos</a></li>
+                <li><a href="#formacao">Formação</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="container">
+            <h1>Priscila Dalepiane</h1>
+            <p>Estatística | Ciência de Dados | Machine Learning & MLOps</p>
+            <div class="social-badges">
+                <a href="https://www.linkedin.com/in/priscila-gon%C3%A7alves-dalepiane-947b65b2/" target="_blank" class="badge badge-linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/prisciladalepiane" target="_blank" class="badge badge-github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rpubs.com/prisciladalepiane" target="_blank" class="badge badge-rpubs">
+                    <i class="fas fa-code"></i> RPubs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <main class="container main-content">
+        
+        <!-- About Section -->
+        <section id="sobre" style="scroll-margin-top: 100px;">
+            <h2 class="section-title">Descrição Profissional</h2>
+            <div class="profile-card">
+                <p>
+                    Estatística com formação em Engenharia de Software, atuando na análise de dados e modelagem estatística aplicada em larga escala. Experiência com R, Python e SQL no desenvolvimento de pipelines analíticos, automações e modelos estatísticos, com foco em código reprodutível, versionado e documentado. Atuação em contextos educacionais com grandes bases de dados, incluindo aplicação da Teoria de Resposta ao Item (TRI) em diferentes modelos para mensuração de variáveis latentes e suporte à tomada de decisão. Atualmente em pós-graduação em Machine Learning e MLOps, com projetos práticos voltados ao desenvolvimento, validação e operacionalização de modelos preditivos. Mantenho projetos técnicos em estatística, ciência de dados e machine learning no GitHub, com interesse em desafios que envolvam modelagem, automação e ciclo de vida de modelos.
+                </p>
+            </div>
+        </section>
+
+        <!-- Two column section: Experience & Skills -->
+        <div class="grid-2">
+            
+            <!-- Left: Experience Section -->
+            <section id="experiencia" style="scroll-margin-top: 100px;">
+                <h2 class="section-title">Experiência Profissional</h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">
+                            <h3>Trieduc</h3>
+                            <h4>Estatística</h4>
+                        </div>
+                        <span class="timeline-date">Ago/2022 – Atual</span>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Automatização de cálculos matemáticos através de R e Python, otimizando o processamento de grandes bases de dados educacionais e reduzindo o tempo de entregas.</li>
+                            <li>Manipulação e tratamento de bases de dados, realizando a limpeza e estruturação de grandes volumes para a produção de análises técnicas e estudos estatísticos.</li>
+                            <li>Análise de dados educacionais com modelagem estatística avançada, aplicando a Teoria de Resposta ao Item (TRI) com domínio em diferentes modelos (incluindo o de resposta gradual de Samejima e variações), focado na medição de variáveis latentes.</li>
+                            <li>Gestão e organização do fluxo de trabalho utilizando Kanban no Trello, garantindo a priorização de demandas e a rastreabilidade das entregas técnicas.</li>
+                            <li>Estruturação de repositórios no GitHub para documentação e versionamento de scripts utilizados em análises e automações.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">
+                            <h3>Estuda.com</h3>
+                            <h4>Analista Estatístico Jr</h4>
+                        </div>
+                        <span class="timeline-date">Mar/2021 – Jul/2022</span>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li>Engenharia e manipulação de grandes volumes de dados através de R, MySQL e BigQuery, assegurando a limpeza e estruturação de bases complexas para estudos analíticos de larga escala.</li>
+                            <li>Construção de aplicações analíticas e dashboards interativos, focados na visualização estatística e exploração técnica de microdados de avaliações nacionais de larga escala.</li>
+                            <li>Desenvolvimento de algoritmos de cálculo para motores de recomendação, focados na automação e customização de entregas baseadas no perfil dos dados.</li>
+                            <li>Refatoração de códigos e documentação de processos.</li>
+                            <li>Realização de análises com estatística descritiva com diferentes bases de dados para fundamentar a tomada de decisão e suporte estratégico ao negócio.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 40px;">Experiência Acadêmica</h2>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-title">
+                            <h3>UFMT / Unicesumar</h3>
+                            <h4>Monitorias & Atividades Acadêmicas</h4>
+                        </div>
+                    </div>
+                    <div class="timeline-body">
+                        <ul>
+                            <li><strong>Monitoria em Estatística Computacional (UFMT):</strong> Apoio a alunos em atividades práticas com R, orientação na implementação de scripts e compreensão dos conceitos aplicados (1 semestre).</li>
+                            <li><strong>Desafio Nacional Algoritmo I (Unicesumar):</strong> Premiação pela melhor solução em desafio nacional com foco em uso de algoritmos para resolução de problemas.</li>
+                            <li><strong>Monitoria em Probabilidade I e III (UFMT):</strong> Atendimento a alunos, apoio em atividades práticas, resolução de exercícios e esclarecimento de dúvidas (3 semestres).</li>
+                            <li><strong>Bolsista de Projeto de Extensão - CODEX (UFMT):</strong> Análise de dados e elaboração de relatórios com tabelas dinâmicas e recursos avançados do Excel (2 semestres).</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Right: Skills Sidebar -->
+            <aside id="habilidades" class="skills-sidebar" style="scroll-margin-top: 100px;">
+                <h2 class="section-title">Habilidades</h2>
+                
+                <div class="skill-block">
+                    <h4>Linguagens</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">R</span>
+                        <span class="skill-tag highlight">Python</span>
+                        <span class="skill-tag">SQL (MySQL)</span>
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">BigQuery</span>
+                    </div>
+                </div>
+
+                <div class="skill-block">
+                    <h4>Estatística</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Análise Exploratória</span>
+                        <span class="skill-tag">Modelagem Estatística</span>
+                        <span class="skill-tag highlight">Teoria de Resposta ao Item (TRI)</span>
+                        <span class="skill-tag">Inferência</span>
+                        <span class="skill-tag">Teste de Hipóteses</span>
+                    </div>
+                </div>
+
+                <div class="skill-block">
+                    <h4>Engenharia de Dados</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ETL / Estruturação</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                        <span class="skill-tag">Visualização de Dados</span>
+                        <span class="skill-tag">Modelagem Entidade Relacionamento</span>
+                    </div>
+                </div>
+
+                <div class="skill-block">
+                    <h4>Machine Learning</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">Optuna</span>
+                        <span class="skill-tag">Otimização de Hiperparâmetros</span>
+                        <span class="skill-tag">Modelos Preditivos</span>
+                    </div>
+                </div>
+
+                <div class="skill-block">
+                    <h4>Ferramentas & MLOps</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag highlight">Docker</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Shiny</span>
+                        <span class="skill-tag">Tidyverse</span>
+                    </div>
+                </div>
+
+                <div class="skill-block">
+                    <h4>Idiomas</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Inglês: Intermediário (B1)</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Repositories / Projects Section -->
+        <section id="repositorios" style="scroll-margin-top: 100px;">
+            <h2 class="section-title">Portfólio de Repositórios (GitHub)</h2>
+            <div class="repo-grid">
+                
+                <div class="repo-card">
+                    <div>
+                        <div class="repo-icon">⚙️</div>
+                        <div class="repo-name">Machine Learning</div>
+                        <div class="repo-desc">Estudos e projetos de machine learning, treinamento, avaliação e experimentos aplicados.</div>
+                    </div>
+                    <a href="https://github.com/prisciladalepiane/machine-learning" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="repo-card">
+                    <div>
+                        <div class="repo-icon">🧠</div>
+                        <div class="repo-name">Deep Learning</div>
+                        <div class="repo-desc">Estudos e experimentos com redes neurais e arquiteturas profundas.</div>
+                    </div>
+                    <a href="https://github.com/prisciladalepiane/deep-learning" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="repo-card">
+                    <div>
+                        <div class="repo-icon">♾️</div>
+                        <div class="repo-name">MLOps</div>
+                        <div class="repo-desc">Versionamento de modelos, pipelines, deploy e monitoramento contínuo.</div>
+                    </div>
+                    <a href="https://github.com/prisciladalepiane/mlops" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="repo-card">
+                    <div>
+                        <div class="repo-icon">🔬</div>
+                        <div class="repo-name">Ciência de Dados com Python</div>
+                        <div class="repo-desc">Análise de dados, matemática, estatística, visualização e fundamentos de Machine Learning com Python.</div>
+                    </div>
+                    <a href="https://github.com/prisciladalepiane/data_sci_py" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="repo-card">
+                    <div>
+                        <div class="repo-icon">🗃️</div>
+                        <div class="repo-name">Banco de Dados</div>
+                        <div class="repo-desc">Modelagem e consultas SQL com foco em bancos relacionais. Inclui scripts de criação de tabelas e casos de uso.</div>
+                    </div>
+                    <a href="https://github.com/prisciladalepiane/banco_de_dados" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="repo-card">
+                    <div>
+                        <div class="repo-icon">🧪</div>
+                        <div class="repo-name">Shiny e Teoria Clássica dos Testes</div>
+                        <div class="repo-desc">Aplicação Shiny estruturada para visualização e análise estatística baseada em TCT.</div>
+                    </div>
+                    <a href="https://github.com/prisciladalepiane/app_shiny_tct" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="repo-card">
+                    <div>
+                        <div class="repo-icon">📚</div>
+                        <div class="repo-name">Teoria de Resposta ao Item</div>
+                        <div class="repo-desc">Monografia e estudos aprofundados sobre TRI utilizando modelagem em LaTeX e R.</div>
+                    </div>
+                    <a href="https://github.com/prisciladalepiane/artigo-tri-latex" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="formacao" style="scroll-margin-top: 100px;">
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div class="repo-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                
+                <div class="repo-card" style="border-top: 4px solid #9b59b6;">
+                    <div>
+                        <div class="repo-name" style="font-size: 17px;">Pós-Graduação em Machine Learning e MLOps</div>
+                        <div class="repo-desc" style="color: #3498db; font-weight: 500; margin-bottom: 5px;">Data Science Academy</div>
+                        <div class="repo-desc">2025 - Atual</div>
+                    </div>
+                </div>
+
+                <div class="repo-card" style="border-top: 4px solid #3498db;">
+                    <div>
+                        <div class="repo-name" style="font-size: 17px;">Bacharelado em Estatística</div>
+                        <div class="repo-desc" style="color: #3498db; font-weight: 500; margin-bottom: 5px;">UFMT</div>
+                        <div class="repo-desc">2020 - 2024</div>
+                    </div>
+                </div>
+
+                <div class="repo-card" style="border-top: 4px solid #2ecc71;">
+                    <div>
+                        <div class="repo-name" style="font-size: 17px;">Bacharelado em Engenharia de Software</div>
+                        <div class="repo-desc" style="color: #3498db; font-weight: 500; margin-bottom: 5px;">Unicesumar</div>
+                        <div class="repo-desc">2020 - 2023</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer & Contact Details -->
+    <footer>
+        <div class="container">
+            <div class="footer-contact">
+                <a href="mailto:prisciladalepiane@gmail.com"><i class="fas fa-envelope"></i> prisciladalepiane@gmail.com</a>
+                <a href="tel:+5565999459935"><i class="fas fa-phone"></i> (65) 999459935</a>
+                <a href="https://github.com/prisciladalepiane" target="_blank"><i class="fab fa-github"></i> github.com/prisciladalepiane</a>
+            </div>
+            <p>&copy; 2026 Priscila Dalepiane. Desenvolvido com inspiração nos temas profissionais Colorlib & TemplateMo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
