@@ -39,10 +39,7 @@
         }
         @media (max-width: 768px) {
             .nav-container {
-                flex-direction: column; 
-                justify-content: center; 
-                padding: 15px 0; 
-                gap: 15px; 
+                display: none;
             }
         }
         .logo {
