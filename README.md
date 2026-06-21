@@ -10,4 +10,3 @@
 | 🧪  [**Shiny e Teoria Clássica dos Testes**](https://github.com/prisciladalepiane/app_shiny_tct)  | Aplicação Shiny para visualização e análise em TCT. |
 |  📚 [**Teoria de Resposta ao Item**](https://github.com/prisciladalepiane/artigo-tri-latex)| Monografia e estudos sobre TRI com LaTeX e R. |
 
-<img src="https://github.com/SamirPaulb/SamirPaulb/blob/main/assets/rainbow-superthin.webp" width="100%" loading="lazy">
