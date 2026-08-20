@@ -15,13 +15,28 @@
     <header>
         <div class="container nav-container">
             <div class="logo">PRISCILA<span>DALEPIANE</span></div>
-            <ul class="nav-links">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#repositorios">Projetos</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#sobre" data-i18n data-pt="Sobre" data-en="About">Sobre</a></li>
+                    <li><a href="#formacao" data-i18n data-pt="Formação" data-en="Education">Formação</a></li>
+                    <li><a href="#experiencia" data-i18n data-pt="Experiência" data-en="Experience">Experiência</a></li>
+                    <li><a href="#habilidades" data-i18n data-pt="Habilidades" data-en="Skills">Habilidades</a></li>
+                    <li><a href="#repositorios" data-i18n data-pt="Projetos" data-en="Projects">Projetos</a></li>
+                </ul>
+                <!-- Language Toggle Button -->
+                <button id="langToggleBtn" class="lang-switch-btn" aria-label="Alterar idioma">
+                    <span class="lang-flag" id="langFlag">
+                        <!-- Default: Brazil Flag SVG -->
+                        <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#009b3a" d="M0 0h720v504H0z"/>
+                            <path fill="#fedf00" d="M360 48L68 252l292 204 292-204z"/>
+                            <circle fill="#002776" cx="360" cy="252" r="126"/>
+                            <path fill="#fff" d="M237 236c53-30 145-31 246 3-8 16-24 30-41 40-84-29-160-23-205-4z"/>
+                        </svg>
+                    </span>
+                    <span class="lang-text" id="langLabel">PT</span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -29,16 +44,13 @@
     <section class="hero">
         <div class="container">
             <h1>Priscila Dalepiane</h1>
-            <p>Estatística | Ciência de Dados | Machine Learning </p>
+            <p data-i18n data-pt="Estatística | Ciência de Dados | Machine Learning" data-en="Statistician | Data Science | Machine Learning">Estatística | Ciência de Dados | Machine Learning</p>
             <div class="social-badges">
                 <a href="https://www.linkedin.com/in/priscila-gon%C3%A7alves-dalepiane-947b65b2/" target="_blank" class="badge badge-linkedin">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
                 <a href="https://github.com/prisciladalepiane" target="_blank" class="badge badge-github">
                     <i class="fab fa-github"></i> GitHub
-                </a>
-            <!--  <a href="https://rpubs.com/prisciladalepiane" target="_blank" class="badge badge-rpubs">
-                    <i class="fas fa-code"></i> RPubs -->
                 </a>
             </div>
         </div>
@@ -49,29 +61,32 @@
         
         <!-- SOBRE -->
         <section id="sobre" style="scroll-margin-top: 100px;">
-            <h2 class="section-title">Descrição Profissional</h2>
+            <h2 class="section-title" data-i18n data-pt="Descrição Profissional" data-en="Professional Summary">Descrição Profissional</h2>
             <div class="profile-card">
-                <p>
-                    Estatística com formação em Engenharia de Software, atuando na análise de dados e modelagem estatística aplicada em larga escala. Experiência com R, Python e SQL no desenvolvimento de pipelines analíticos, automações e modelos estatísticos, com foco em código reprodutível, versionado e documentado. Atuação em contextos educacionais com grandes bases de dados, incluindo aplicação da Teoria de Resposta ao Item (TRI) em diferentes modelos para mensuração de variáveis latentes e suporte à tomada de decisão. Atualmente em pós-graduação em Machine Learning e MLOps, com projetos práticos voltados ao desenvolvimento, validação e operacionalização de modelos preditivos. 
+                <p data-i18n 
+                   data-pt="Estatística com formação em Engenharia de Software, atuando na análise de dados e modelagem estatística aplicada em larga escala. Experiência com R, Python e SQL no desenvolvimento de pipelines analíticos, automações e modelos estatísticos, com foco em código reprodutível, versionado e documentado. Atuação em contextos educacionais com grandes bases de dados, incluindo aplicação da Teoria de Resposta ao Item (TRI) em diferentes modelos para mensuração de variáveis latentes e suporte à tomada de decisão. Atualmente em pós-graduação em Machine Learning e MLOps, com projetos práticos voltados ao desenvolvimento, validação e operacionalização de modelos preditivos."
+                   data-en="Statistician with a background in Software Engineering, working on large-scale applied data analysis and statistical modeling. Experienced with R, Python, and SQL in developing analytical pipelines, automation, and statistical models, focusing on reproducible, versioned, and documented code. Background in educational contexts handling large datasets, including the application of Item Response Theory (IRT) with various models to measure latent variables and support decision-making. Currently pursuing a Postgraduate degree in Machine Learning & MLOps, focusing on practical projects for building, validating, and deploying predictive models.">
+                    Estatística com formação em Engenharia de Software, atuando na análise de dados e modelagem estatística aplicada em larga escala. Experiência com R, Python e SQL no desenvolvimento de pipelines analíticos, automações e modelos estatísticos, com foco em código reprodutível, versionado e documentado. Atuação em contextos educacionais com grandes bases de dados, incluindo aplicação da Teoria de Resposta ao Item (TRI) em diferentes modelos para mensuração de variáveis latentes e suporte à tomada de decisão. Atualmente em pós-graduação em Machine Learning e MLOps, com projetos práticos voltados ao desenvolvimento, validação e operacionalização de modelos preditivos.
                 </p>
             </div>
         </section>
+
         <!-- Formação -->
         <section id="formacao" style="scroll-margin-top: 100px;">
-            <h2 class="section-title">Formação Acadêmica</h2>
+            <h2 class="section-title" data-i18n data-pt="Formação Acadêmica" data-en="Academic Education">Formação Acadêmica</h2>
             <div class="repo-grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
                 
                 <div class="repo-card" style="border-top: 4px solid #9b59b6;">
                     <div>
-                        <div class="repo-name" style="font-size: 17px;">Pós-Graduação em Machine Learning e MLOps</div>
+                        <div class="repo-name" style="font-size: 17px;" data-i18n data-pt="Pós-Graduação em Machine Learning e MLOps" data-en="Postgraduate Degree in Machine Learning & MLOps">Pós-Graduação em Machine Learning e MLOps</div>
                         <div class="repo-desc" style="color: #3498db; font-weight: 500; margin-bottom: 5px;">Data Science Academy</div>
-                        <div class="repo-desc">2025 - Atual</div>
+                        <div class="repo-desc" data-i18n data-pt="2025 - Atual" data-en="2025 - Present">2025 - Atual</div>
                     </div>
                 </div>
 
                 <div class="repo-card" style="border-top: 4px solid #3498db;">
                     <div>
-                        <div class="repo-name" style="font-size: 17px;">Bacharelado em Estatística</div>
+                        <div class="repo-name" style="font-size: 17px;" data-i18n data-pt="Bacharelado em Estatística" data-en="Bachelor's Degree in Statistics">Bacharelado em Estatística</div>
                         <div class="repo-desc" style="color: #3498db; font-weight: 500; margin-bottom: 5px;">UFMT</div>
                         <div class="repo-desc">2020 - 2024</div>
                     </div>
@@ -79,7 +94,7 @@
 
                 <div class="repo-card" style="border-top: 4px solid #2ecc71;">
                     <div>
-                        <div class="repo-name" style="font-size: 17px;">Bacharelado em Engenharia de Software</div>
+                        <div class="repo-name" style="font-size: 17px;" data-i18n data-pt="Bacharelado em Engenharia de Software" data-en="Bachelor's Degree in Software Engineering">Bacharelado em Engenharia de Software</div>
                         <div class="repo-desc" style="color: #3498db; font-weight: 500; margin-bottom: 5px;">Unicesumar</div>
                         <div class="repo-desc">2020 - 2023</div>
                     </div>
@@ -93,23 +108,23 @@
         <div class="grid-2">
             <!-- Left: Experience Section -->
             <section id="experiencia" style="scroll-margin-top: 100px;">
-                <h2 class="section-title">Experiência Profissional</h2>
+                <h2 class="section-title" data-i18n data-pt="Experiência Profissional" data-en="Professional Experience">Experiência Profissional</h2>
                 
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-title">
                             <h3>Trieduc</h3>
-                            <h4>Estatística</h4>
+                            <h4 data-i18n data-pt="Estatística" data-en="Statistician">Estatística</h4>
                         </div>
-                        <span class="timeline-date">Ago/2022 – Atual</span>
+                        <span class="timeline-date" data-i18n data-pt="Ago/2022 – Atual" data-en="Aug/2022 – Present">Ago/2022 – Atual</span>
                     </div>
                     <div class="timeline-body">
                         <ul>
-                            <li>Automatização de cálculos matemáticos através de R e Python, otimizando o processamento de grandes bases de dados educacionais e reduzindo o tempo de entregas.</li>
-                            <li>Manipulação e tratamento de bases de dados, realizando a limpeza e estruturação de grandes volumes para a produção de análises técnicas e estudos estatísticos.</li>
-                            <li>Análise de dados educacionais com modelagem estatística avançada, aplicando a Teoria de Resposta ao Item (TRI) com domínio em diferentes modelos (incluindo o de resposta gradual de Samejima e variações), focado na medição de variáveis latentes.</li>
-                            <li>Gestão e organização do fluxo de trabalho utilizando Kanban no Trello, garantindo a priorização de demandas e a rastreabilidade das entregas técnicas.</li>
-                            <li>Estruturação de repositórios no GitHub para documentação e versionamento de scripts utilizados em análises e automações.</li>
+                            <li data-i18n data-pt="Automatização de cálculos matemáticos através de R e Python, otimizando o processamento de grandes bases de dados educacionais e reduzindo o tempo de entregas." data-en="Automating mathematical computations using R and Python, optimizing large educational dataset processing and reducing delivery times.">Automatização de cálculos matemáticos através de R e Python, otimizando o processamento de grandes bases de dados educacionais e reduzindo o tempo de entregas.</li>
+                            <li data-i18n data-pt="Manipulação e tratamento de bases de dados, realizando a limpeza e estruturação de grandes volumes para a produção de análises técnicas e estudos estatísticos." data-en="Data wrangling and manipulation, performing cleaning and structuring of large data volumes for technical analysis and statistical studies.">Manipulação e tratamento de bases de dados, realizando a limpeza e estruturação de grandes volumes para a produção de análises técnicas e estudos estatísticos.</li>
+                            <li data-i18n data-pt="Análise de dados educacionais com modelagem estatística avançada, aplicando a Teoria de Resposta ao Item (TRI) com domínio em diferentes modelos (incluindo o de resposta gradual de Samejima e variações), focado na medição de variáveis latentes." data-en="Educational data analysis using advanced statistical modeling, applying Item Response Theory (IRT) with proficiency in various models (including Samejima's Graded Response Model and variations) focused on measuring latent variables.">Análise de dados educacionais com modelagem estatística avançada, aplicando a Teoria de Resposta ao Item (TRI) com domínio em diferentes modelos (incluindo o de resposta gradual de Samejima e variações), focado na medição de variáveis latentes.</li>
+                            <li data-i18n data-pt="Gestão e organização do fluxo de trabalho utilizando Kanban no Trello, garantindo a priorização de demandas e a rastreabilidade das entregas técnicas." data-en="Workflow management and organization using Kanban on Trello, ensuring task prioritization and technical deliverable traceability.">Gestão e organização do fluxo de trabalho utilizando Kanban no Trello, garantindo a priorização de demandas e a rastreabilidade das entregas técnicas.</li>
+                            <li data-i18n data-pt="Estruturação de repositórios no GitHub para documentação e versionamento de scripts utilizados em análises e automações." data-en="Structuring GitHub repositories for documentation and version control of scripts used in analysis and automation.">Estruturação de repositórios no GitHub para documentação e versionamento de scripts utilizados em análises e automações.</li>
                         </ul>
                     </div>
                 </div>
@@ -118,35 +133,35 @@
                     <div class="timeline-header">
                         <div class="timeline-title">
                             <h3>Estuda.com</h3>
-                            <h4>Analista Estatístico Jr</h4>
+                            <h4 data-i18n data-pt="Analista Estatístico Jr" data-en="Junior Statistical Analyst">Analista Estatístico Jr</h4>
                         </div>
                         <span class="timeline-date">Mar/2021 – Jul/2022</span>
                     </div>
                     <div class="timeline-body">
                         <ul>
-                            <li>Engenharia e manipulação de grandes volumes de dados através de R, MySQL e BigQuery, assegurando a limpeza e estruturação de bases complexas para estudos analíticos de larga escala.</li>
-                            <li>Construção de aplicações analíticas e dashboards interativos, focados na visualização estatística e exploração técnica de microdados de avaliações nacionais de larga escala.</li>
-                            <li>Desenvolvimento de algoritmos de cálculo para motores de recomendação, focados na automação e customização de entregas baseadas no perfil dos dados.</li>
-                            <li>Refatoração de códigos e documentação de processos.</li>
-                            <li>Realização de análises com estatística descritiva com diferentes bases de dados para fundamentar a tomada de decisão e suporte estratégico ao negócio.</li>
+                            <li data-i18n data-pt="Engenharia e manipulação de grandes volumes de dados através de R, MySQL e BigQuery, assegurando a limpeza e estruturação de bases complexas para estudos analíticos de larga escala." data-en="Data engineering and wrangling of large datasets using R, MySQL, and BigQuery, ensuring dataset cleaning and structuring for large-scale analytical studies.">Engenharia e manipulação de grandes volumes de dados através de R, MySQL e BigQuery, assegurando a limpeza e estruturação de bases complexas para estudos analíticos de larga escala.</li>
+                            <li data-i18n data-pt="Construção de aplicações analíticas e dashboards interativos, focados na visualização estatística e exploração técnica de microdados de avaliações nacionais de larga escala." data-en="Development of analytical applications and interactive dashboards focused on statistical visualization and technical exploration of national assessment microdata.">Construção de aplicações analíticas e dashboards interativos, focados na visualização estatística e exploração técnica de microdados de avaliações nacionais de larga escala.</li>
+                            <li data-i18n data-pt="Desenvolvimento de algoritmos de cálculo para motores de recomendação, focados na automação e customização de entregas baseadas no perfil dos dados." data-en="Development of calculation algorithms for recommendation engines, focused on automating and customizing deliveries based on data profiles.">Desenvolvimento de algoritmos de cálculo para motores de recomendação, focados na automação e customização de entregas baseadas no perfil dos dados.</li>
+                            <li data-i18n data-pt="Refatoração de códigos e documentação de processos." data-en="Code refactoring and process documentation.">Refatoração de códigos e documentação de processos.</li>
+                            <li data-i18n data-pt="Realização de análises com estatística descritiva com diferentes bases de dados para fundamentar a tomada de decisão e suporte estratégico ao negócio." data-en="Conducting descriptive statistical analyses on various datasets to support strategic business decision-making.">Realização de análises com estatística descritiva com diferentes bases de dados para fundamentar a tomada de decisão e suporte estratégico ao negócio.</li>
                         </ul>
                     </div>
                 </div>
 
-                <h2 class="section-title" style="margin-top: 40px;">Experiência Acadêmica</h2>
+                <h2 class="section-title" style="margin-top: 40px;" data-i18n data-pt="Experiência Acadêmica" data-en="Academic Experience">Experiência Acadêmica</h2>
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-title">
                             <h3>UFMT / Unicesumar</h3>
-                            <h4>Monitorias & Atividades Acadêmicas</h4>
+                            <h4 data-i18n data-pt="Monitorias & Atividades Acadêmicas" data-en="Teaching Assistantships & Academic Activities">Monitorias & Atividades Acadêmicas</h4>
                         </div>
                     </div>
                     <div class="timeline-body">
                         <ul>
-                            <li><strong>Monitoria em Estatística Computacional (UFMT):</strong> Apoio a alunos em atividades práticas com R, orientação na implementação de scripts e compreensão dos conceitos aplicados (1 semestre).</li>
-                            <li><strong>Desafio Nacional Algoritmo I (Unicesumar):</strong> Premiação pela melhor solução em desafio nacional com foco em uso de algoritmos para resolução de problemas.</li>
-                            <li><strong>Monitoria em Probabilidade I e III (UFMT):</strong> Atendimento a alunos, apoio em atividades práticas, resolução de exercícios e esclarecimento de dúvidas (3 semestres).</li>
-                            <li><strong>Bolsista de Projeto de Extensão - CODEX (UFMT):</strong> Análise de dados e elaboração de relatórios com tabelas dinâmicas e recursos avançados do Excel (2 semestres).</li>
+                            <li data-i18n data-pt="<strong>Monitoria em Estatística Computacional (UFMT):</strong> Apoio a alunos em atividades práticas com R, orientação na implementação de scripts e compreensão dos conceitos aplicados (1 semestre)." data-en="<strong>Teaching Assistant in Computational Statistics (UFMT):</strong> Supporting students in practical activities with R, guiding script implementation and conceptual understanding (1 semester)."><strong>Monitoria em Estatística Computacional (UFMT):</strong> Apoio a alunos em atividades práticas com R, orientação na implementação de scripts e compreensão dos conceitos aplicados (1 semestre).</li>
+                            <li data-i18n data-pt="<strong>Desafio Nacional Algoritmo I (Unicesumar):</strong> Premiação pela melhor solução em desafio nacional com foco em uso de algoritmos para resolução de problemas." data-en="<strong>National Algorithm Challenge I (Unicesumar):</strong> Awarded best solution in a national competition focused on using algorithms for problem solving."><strong>Desafio Nacional Algoritmo I (Unicesumar):</strong> Premiação pela melhor solução em desafio nacional com foco em uso de algoritmos para resolução de problemas.</li>
+                            <li data-i18n data-pt="<strong>Monitoria em Probabilidade I e III (UFMT):</strong> Atendimento a alunos, apoio em atividades práticas, resolução de exercícios e esclarecimento de dúvidas (3 semestres)." data-en="<strong>Teaching Assistant in Probability I & III (UFMT):</strong> Student tutoring, practical activity support, problem solving, and clarifying doubts (3 semesters)."><strong>Monitoria em Probabilidade I e III (UFMT):</strong> Atendimento a alunos, apoio em atividades práticas, resolução de exercícios e esclarecimento de dúvidas (3 semestres).</li>
+                            <li data-i18n data-pt="<strong>Bolsista de Projeto de Extensão - CODEX (UFMT):</strong> Análise de dados e elaboração de relatórios com tabelas dinâmicas e recursos avançados do Excel (2 semestres)." data-en="<strong>Extension Project Scholar - CODEX (UFMT):</strong> Data analysis and report preparation using pivot tables and advanced Excel features (2 semesters)."><strong>Bolsista de Projeto de Extensão - CODEX (UFMT):</strong> Análise de dados e elaboração de relatórios com tabelas dinâmicas e recursos avançados do Excel (2 semestres).</li>
                         </ul>
                     </div>
                 </div>
@@ -156,10 +171,10 @@
 
             <!-- Right: Skills Sidebar -->
             <aside id="habilidades" class="skills-sidebar" style="scroll-margin-top: 100px;">
-                <h2 class="section-title">Habilidades</h2>
+                <h2 class="section-title" data-i18n data-pt="Habilidades" data-en="Skills">Habilidades</h2>
                 
                 <div class="skill-block">
-                    <h4>Linguagens</h4>
+                    <h4 data-i18n data-pt="Linguagens" data-en="Languages">Linguagens</h4>
                     <div class="skill-tags">
                         <span class="skill-tag highlight">R</span>
                         <span class="skill-tag highlight">Python</span>
@@ -170,39 +185,39 @@
                 </div>
 
                 <div class="skill-block">
-                    <h4>Estatística</h4>
+                    <h4 data-i18n data-pt="Estatística" data-en="Statistics">Estatística</h4>
                     <div class="skill-tags">
-                        <span class="skill-tag">Análise Exploratória</span>
-                        <span class="skill-tag">Modelagem Estatística</span>
-                        <span class="skill-tag">Teoria de Resposta ao Item (TRI)</span>
-                        <span class="skill-tag">Inferência</span>
-                        <span class="skill-tag">Teste de Hipóteses</span>
+                        <span class="skill-tag" data-i18n data-pt="Análise Exploratória" data-en="Exploratory Data Analysis">Análise Exploratória</span>
+                        <span class="skill-tag" data-i18n data-pt="Modelagem Estatística" data-en="Statistical Modeling">Modelagem Estatística</span>
+                        <span class="skill-tag" data-i18n data-pt="Teoria de Resposta ao Item (TRI)" data-en="Item Response Theory (IRT)">Teoria de Resposta ao Item (TRI)</span>
+                        <span class="skill-tag" data-i18n data-pt="Inferência" data-en="Inference">Inferência</span>
+                        <span class="skill-tag" data-i18n data-pt="Teste de Hipóteses" data-en="Hypothesis Testing">Teste de Hipóteses</span>
                     </div>
                 </div>
 
                 <div class="skill-block">
-                    <h4>Engenharia de Dados</h4>
+                    <h4 data-i18n data-pt="Engenharia de Dados" data-en="Data Engineering">Engenharia de Dados</h4>
                     <div class="skill-tags">
-                        <span class="skill-tag">ETL / Estruturação</span>
+                        <span class="skill-tag" data-i18n data-pt="ETL / Estruturação" data-en="ETL / Data Structuring">ETL / Estruturação</span>
                         <span class="skill-tag">Feature Engineering</span>
-                        <span class="skill-tag">Visualização de Dados</span>
-                        <span class="skill-tag">Modelagem Entidade Relacionamento</span>
+                        <span class="skill-tag" data-i18n data-pt="Visualização de Dados" data-en="Data Visualization">Visualização de Dados</span>
+                        <span class="skill-tag" data-i18n data-pt="Modelagem Entidade Relacionamento" data-en="Entity Relationship Modeling">Modelagem Entidade Relacionamento</span>
                     </div>
                 </div>
 
                 <div class="skill-block">
-                    <h4>Machine Learning</h4>
+                    <h4 data-i18n data-pt="Machine Learning" data-en="Machine Learning">Machine Learning</h4>
                     <div class="skill-tags">
                         <span class="skill-tag">Scikit-learn</span>
                         <span class="skill-tag">XGBoost</span>
                         <span class="skill-tag">Optuna</span>
-                        <span class="skill-tag">Otimização de Hiperparâmetros</span>
-                        <span class="skill-tag">Modelos Preditivos</span>
+                        <span class="skill-tag" data-i18n data-pt="Otimização de Hiperparâmetros" data-en="Hyperparameter Optimization">Otimização de Hiperparâmetros</span>
+                        <span class="skill-tag" data-i18n data-pt="Modelos Preditivos" data-en="Predictive Models">Modelos Preditivos</span>
                     </div>
                 </div>
 
                 <div class="skill-block">
-                    <h4>Ferramentas </h4>
+                    <h4 data-i18n data-pt="Ferramentas" data-en="Tools">Ferramentas</h4>
                     <div class="skill-tags">
                         <span class="skill-tag">Git</span>
                         <span class="skill-tag">Docker</span>
@@ -213,9 +228,10 @@
                 </div>
 
                 <div class="skill-block">
-                    <h4>Idiomas</h4>
+                    <h4 data-i18n data-pt="Idiomas" data-en="Languages">Idiomas</h4>
                     <div class="skill-tags">
-                        <span class="skill-tag">Inglês: Intermediário (B1)</span>
+                        <span class="skill-tag" data-i18n data-pt="Português: Nativo" data-en="Portuguese: Native">Português: Nativo</span>
+                        <span class="skill-tag" data-i18n data-pt="Inglês: Intermediário (B1)" data-en="English: Intermediate (B1)">Inglês: Intermediário (B1)</span>
                     </div>
                 </div>
             </aside>
@@ -223,76 +239,74 @@
           
         <!-- Repositorios / Projetos -->
         <section id="repositorios" style="scroll-margin-top: 100px;">
-            <h2 class="section-title">Portfólio de Repositórios (GitHub)</h2>
+            <h2 class="section-title" data-i18n data-pt="Portfólio de Repositórios (GitHub)" data-en="GitHub Repository Portfolio">Portfólio de Repositórios (GitHub)</h2>
             <div class="repo-grid">
                 
                 <div class="repo-card">
                     <div>
                         <div class="repo-icon">⚙️</div>
                         <div class="repo-name">Machine Learning</div>
-                        <div class="repo-desc">Estudos e projetos de machine learning, treinamento, avaliação e experimentos aplicados.</div>
+                        <div class="repo-desc" data-i18n data-pt="Estudos e projetos de machine learning, treinamento, avaliação e experimentos aplicados." data-en="Machine learning studies and projects, model training, evaluation, and applied experiments.">Estudos e projetos de machine learning, treinamento, avaliação e experimentos aplicados.</div>
                     </div>
-                    <a href="https://github.com/prisciladalepiane/machine-learning" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/prisciladalepiane/machine-learning" target="_blank" class="repo-link"><span data-i18n data-pt="Ver repositório" data-en="View repository">Ver repositório</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="repo-card">
                     <div>
                         <div class="repo-icon">🧠</div>
                         <div class="repo-name">Deep Learning</div>
-                        <div class="repo-desc">Estudos e experimentos com redes neurais e arquiteturas profundas.</div>
+                        <div class="repo-desc" data-i18n data-pt="Estudos e experimentos com redes neurais e arquiteturas profundas." data-en="Studies and experiments with neural networks and deep architectures.">Estudos e experimentos com redes neurais e arquiteturas profundas.</div>
                     </div>
-                    <a href="https://github.com/prisciladalepiane/deep-learning" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/prisciladalepiane/deep-learning" target="_blank" class="repo-link"><span data-i18n data-pt="Ver repositório" data-en="View repository">Ver repositório</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="repo-card">
                     <div>
                         <div class="repo-icon">♾️</div>
                         <div class="repo-name">MLOps</div>
-                        <div class="repo-desc">Versionamento de modelos, pipelines, deploy e monitoramento contínuo.</div>
+                        <div class="repo-desc" data-i18n data-pt="Versionamento de modelos, pipelines, deploy e monitoramento contínuo." data-en="Model versioning, pipelines, deployment, and continuous monitoring.">Versionamento de modelos, pipelines, deploy e monitoramento contínuo.</div>
                     </div>
-                    <a href="https://github.com/prisciladalepiane/mlops" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/prisciladalepiane/mlops" target="_blank" class="repo-link"><span data-i18n data-pt="Ver repositório" data-en="View repository">Ver repositório</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="repo-card">
                     <div>
                         <div class="repo-icon">🔬</div>
-                        <div class="repo-name">Ciência de Dados com Python</div>
-                        <div class="repo-desc">Análise de dados, matemática, estatística, visualização e fundamentos de Machine Learning com Python.</div>
+                        <div class="repo-name" data-i18n data-pt="Ciência de Dados com Python" data-en="Data Science with Python">Ciência de Dados com Python</div>
+                        <div class="repo-desc" data-i18n data-pt="Análise de dados, matemática, estatística, visualização e fundamentos de Machine Learning com Python." data-en="Data analysis, mathematics, statistics, visualization, and Machine Learning fundamentals with Python.">Análise de dados, matemática, estatística, visualização e fundamentos de Machine Learning com Python.</div>
                     </div>
-                    <a href="https://github.com/prisciladalepiane/data_sci_py" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/prisciladalepiane/data_sci_py" target="_blank" class="repo-link"><span data-i18n data-pt="Ver repositório" data-en="View repository">Ver repositório</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="repo-card">
                     <div>
                         <div class="repo-icon">🗃️</div>
-                        <div class="repo-name">Banco de Dados</div>
-                        <div class="repo-desc">Modelagem e consultas SQL com foco em bancos relacionais. Inclui scripts de criação de tabelas e casos de uso.</div>
+                        <div class="repo-name" data-i18n data-pt="Banco de Dados" data-en="Databases">Banco de Dados</div>
+                        <div class="repo-desc" data-i18n data-pt="Modelagem e consultas SQL com foco em bancos relacionais. Inclui scripts de criação de tabelas e casos de uso." data-en="SQL modeling and queries focusing on relational databases. Includes table creation scripts and use cases.">Modelagem e consultas SQL com foco em bancos relacionais. Inclui scripts de criação de tabelas e casos de uso.</div>
                     </div>
-                    <a href="https://github.com/prisciladalepiane/banco_de_dados" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/prisciladalepiane/banco_de_dados" target="_blank" class="repo-link"><span data-i18n data-pt="Ver repositório" data-en="View repository">Ver repositório</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="repo-card">
                     <div>
                         <div class="repo-icon">🧪</div>
-                        <div class="repo-name">Shiny e Teoria Clássica dos Testes</div>
-                        <div class="repo-desc">Aplicação Shiny estruturada para visualização e análise estatística baseada em TCT.</div>
+                        <div class="repo-name" data-i18n data-pt="Shiny e Teoria Clássica dos Testes" data-en="Shiny & Classical Test Theory">Shiny e Teoria Clássica dos Testes</div>
+                        <div class="repo-desc" data-i18n data-pt="Aplicação Shiny estruturada para visualização e análise estatística baseada em TCT." data-en="Structured Shiny application for visualization and statistical analysis based on CTT.">Aplicação Shiny estruturada para visualização e análise estatística baseada em TCT.</div>
                     </div>
-                    <a href="https://github.com/prisciladalepiane/app_shiny_tct" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/prisciladalepiane/app_shiny_tct" target="_blank" class="repo-link"><span data-i18n data-pt="Ver repositório" data-en="View repository">Ver repositório</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="repo-card">
                     <div>
                         <div class="repo-icon">📚</div>
-                        <div class="repo-name">Teoria de Resposta ao Item</div>
-                        <div class="repo-desc">Monografia e estudos aprofundados sobre TRI utilizando modelagem em LaTeX e R.</div>
+                        <div class="repo-name" data-i18n data-pt="Teoria de Resposta ao Item" data-en="Item Response Theory">Teoria de Resposta ao Item</div>
+                        <div class="repo-desc" data-i18n data-pt="Monografia e estudos aprofundados sobre TRI utilizando modelagem em LaTeX e R." data-en="Thesis and in-depth IRT studies using LaTeX and R modeling.">Monografia e estudos aprofundados sobre TRI utilizando modelagem em LaTeX e R.</div>
                     </div>
-                    <a href="https://github.com/prisciladalepiane/artigo-tri-latex" target="_blank" class="repo-link">Ver repositório <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/prisciladalepiane/artigo-tri-latex" target="_blank" class="repo-link"><span data-i18n data-pt="Ver repositório" data-en="View repository">Ver repositório</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
 
             </div>
         </section>
-
-
 
     </main>
 
@@ -301,12 +315,56 @@
         <div class="container">
             <div class="footer-contact">
                 <a href="mailto:prisciladalepiane@gmail.com"><i class="fas fa-envelope"></i> prisciladalepiane@gmail.com</a>
-             <!--   <a href="tel:+5565999459935"><i class="fas fa-phone"></i> (65) 999459935</a> -->
                 <a href="https://github.com/prisciladalepiane" target="_blank"><i class="fab fa-github"></i> github.com/prisciladalepiane</a>
             </div>
             <p>&copy; 2026 Priscila Dalepiane.</p>
         </div>
     </footer>
 
+    <!-- i18n Language Toggle Logic -->
+    <script>
+        const flags = {
+            pt: `<svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg"><path fill="#009b3a" d="M0 0h720v504H0z"/><path fill="#fedf00" d="M360 48L68 252l292 204 292-204z"/><circle fill="#002776" cx="360" cy="252" r="126"/><path fill="#fff" d="M237 236c53-30 145-31 246 3-8 16-24 30-41 40-84-29-160-23-205-4z"/></svg>`,
+            en: `<svg viewBox="0 0 741 390" xmlns="http://www.w3.org/2000/svg"><rect fill="#b22234" width="741" height="390"/><path stroke="#fff" stroke-width="30" d="M0 45h741M0 105h741M0 165h741M0 225h741M0 285h741M0 345h741"/><rect fill="#3c3b6e" width="296.4" height="210"/><g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b"><path id="a" d="M24.7 15l2.2 6.7h7.1l-5.7 4.2 2.2 6.8-5.8-4.2-5.8 4.2 2.2-6.8-5.7-4.2h7.1z"/><use href="#a" y="42"/><use href="#a" y="84"/><use href="#a" y="126"/><use href="#a" y="168"/></g><use href="#b" x="49.4"/></g><use href="#e" x="98.8"/></g><use href="#c" x="148.2"/></g><use href="#d" x="49.4" y="21"/></g></svg>`
+        };
+
+        let currentLang = localStorage.getItem('cv_lang') || 'pt';
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('cv_lang', lang);
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
+            // Update Flag & Label
+            const flagEl = document.getElementById('langFlag');
+            const labelEl = document.getElementById('langLabel');
+            
+            if (lang === 'pt') {
+                flagEl.innerHTML = flags.pt;
+                labelEl.textContent = 'PT';
+            } else {
+                flagEl.innerHTML = flags.en;
+                labelEl.textContent = 'EN';
+            }
+
+            // Update all translated elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) {
+                    el.innerHTML = text;
+                }
+            });
+        }
+
+        document.getElementById('langToggleBtn').addEventListener('click', () => {
+            const nextLang = currentLang === 'pt' ? 'en' : 'pt';
+            updateLanguage(nextLang);
+        });
+
+        // Initialize on load
+        if (currentLang !== 'pt') {
+            updateLanguage(currentLang);
+        }
+    </script>
 </body>
 </html>
